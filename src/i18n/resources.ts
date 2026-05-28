@@ -8,125 +8,100 @@ export const resources = {
           zhCN: '中文',
         },
       },
-      sections: {
-        opening: 'Professional Summary',
-        identity: 'Profile Highlights',
-        capability: 'Core Competencies',
-        experienceTimeline: 'Professional Experience',
-        closing: 'Contact',
-      },
-      resume: {
-        opening: {
-          role: 'Frontend Engineer | AI Application Developer',
-          headline: 'Frontend engineer with experience in enterprise systems and AI-enabled workflow products.',
+      webResume: {
+        brand: 'LIN YICHEN',
+        menuLabel: 'Open navigation',
+        closeMenuLabel: 'Close navigation',
+        nav: [
+          { id: 'projects', label: 'Projects' },
+          { id: 'skills', label: 'Skills' },
+          { id: 'experience', label: 'Experience' },
+          { id: 'contact', label: 'Contact' },
+        ],
+        hero: {
+          eyebrow: 'AI Large Model Application Engineer',
+          title: 'AI large-model application engineer',
+          subtitle: 'Building reliable RAG, Agent, and LLMOps workflows for real products.',
           intro:
-            'Experienced in React, TypeScript, and complex business platforms across insurance, operations, and data visualization domains.\nSkilled at translating process-heavy requirements into stable interfaces, reusable modules, and practical AI-assisted solutions.',
-          hint: 'Resume overview',
-        },
-        identity: [
-          {
-            title: 'Enterprise product delivery across multiple business domains',
-            description:
-              'Delivered frontend systems for insurance, vehicle operations, and public-sector visualization projects, with a consistent focus on reliability, maintainability, and execution quality.',
-          },
-          {
-            title: 'Strong handling of process-driven and high-complexity workflows',
-            description:
-              'Experienced in scenarios where approval rules, form validation, state transitions, and exception handling are critical to day-to-day operations.',
-          },
-          {
-            title: 'Able to turn business requirements into implementable technical solutions',
-            description:
-              'Comfortable breaking down business requirements into component boundaries, API contracts, validation rules, and reviewable implementation steps for cross-functional teams.',
-          },
-        ],
-        capabilities: [
-          {
-            title: 'Complex Frontend Development',
-            description:
-              'Build maintainable React and TypeScript interfaces for multi-step forms, process-heavy pages, and operational dashboards with clear state management.',
-            tags: ['React', 'TypeScript', 'Frontend Architecture'],
-          },
-          {
-            title: 'Business Workflow Analysis',
-            description:
-              'Translate business goals into executable flows, boundary conditions, and implementation tasks that engineering teams can deliver with lower risk.',
-            tags: ['Workflow Design', 'Requirement Analysis', 'API Integration'],
-          },
-          {
-            title: 'AI Application Prototyping',
-            description:
-              'Prototype LLM-assisted workflows with structured outputs, review checkpoints, and tool integration approaches suitable for real business scenarios.',
-            tags: ['LLM Application', 'Structured Output', 'Tool Integration'],
-          },
-          {
-            title: 'Collaboration and Delivery',
-            description:
-              'Work effectively with product, design, and backend teams to improve delivery predictability, reduce rework, and keep implementations aligned with business goals.',
-            tags: ['Cross-team Collaboration', 'Delivery Quality', 'Engineering Practice'],
-          },
-        ],
-        experiences: [
-          {
-            period: '2023.09 - Present',
-            summary: 'Frontend Engineer | Real-time vehicle management platform',
-            tags: ['React', 'TypeScript', 'LLM Application', 'Agent Workflow'],
-            achievements: [
-              'Refactored core platform pages to improve code maintainability, rendering stability, and long-term extensibility.',
-              'Established reusable frontend patterns and component conventions that shortened feature delivery time.',
-              'Explored AI-assisted workflow prototypes by mapping business processes into structured data and tool-execution steps.',
-            ],
-          },
-          {
-            period: '2022.08 - 2023.05',
-            summary: 'Frontend Engineer | Insurance training and learning platform',
-            tags: ['React', 'API Integration', 'Human Review'],
-            achievements: [
-              'Designed and implemented process-driven interfaces supporting multiple user roles and training scenarios.',
-              'Improved large-file upload and resumable-upload interactions, reducing operational friction for end users.',
-              'Worked with backend engineers on process state management to reduce workflow exceptions and support issues.',
-            ],
-          },
-          {
-            period: '2022.01 - 2022.08',
-            summary: 'Frontend Engineer | Public-sector and enterprise data visualization projects',
-            tags: ['React', 'TypeScript', 'Structured Output'],
-            achievements: [
-              'Delivered multiple dashboard projects for government and enterprise clients to improve data access efficiency.',
-              'Built AI recognition result views with structured and traceable presentation of model outputs.',
-              'Implemented high-density Canvas-based visualization modules and optimized rendering performance.',
-            ],
-          },
-          {
-            period: '2021.01 - 2021.12',
-            summary: 'Developer | Browser automation and internal tooling',
-            tags: ['GoLang', 'Automation Tools', 'Tool Calling'],
-            achievements: [
-              'Developed browser automation tools to support batch task execution and reduce repetitive manual work.',
-              'Built lightweight Go-based utilities that improved day-to-day engineering productivity.',
-              'Accumulated practical experience in RPA workflow design and automation governance.',
-            ],
-          },
-          {
-            period: '2018.07 - 2020.12',
-            summary: 'Frontend Engineer | Insurance advisor system',
-            tags: ['React', 'TypeScript', 'API Integration'],
-            achievements: [
-              'Contributed to core modules of an insurance advisor system involving complex form-entry workflows.',
-              'Implemented dynamic validation logic to improve data-entry accuracy and interaction consistency.',
-              'Integrated frontend modules with Node.js and MongoDB services to support reliable business data handling.',
-            ],
-          },
-        ],
-        closing: {
-          statement:
-            'Open to frontend engineering and AI application development opportunities involving complex business systems, workflow products, or practical automation.',
-          contacts: [
-            { label: 'Email', value: 'your.email@example.com' },
-            { label: 'GitHub', value: 'github.com/your-handle' },
-            { label: 'Location', value: 'Tokyo, Japan' },
+            'Focused on taking AI applications from prototype to production: retrieval design, tool calling, evaluation loops, backend services, observability, and cost control.',
+          tags: ['RAG', 'Agent Workflow', 'LLMOps', 'FastAPI', 'Vector DB'],
+          metrics: [
+            { value: '5+', label: 'Years engineering experience' },
+            { value: '12+', label: 'AI application projects shipped' },
+            { value: '86%', label: 'Knowledge QA first-answer accuracy' },
           ],
         },
+        projectsTitle: 'Projects and impact',
+        projects: [
+          {
+            title: 'Enterprise knowledge QA platform',
+            meta: '2025 · RAG / Multi-tenant / Permission filtering',
+            description:
+              'Designed chunking, metadata permissions, hybrid retrieval, reranking, and offline evaluation loops for sales, support, and engineering knowledge workflows.',
+          },
+          {
+            title: 'Intelligent ticket Agent',
+            meta: '2024 · Tool calling / CRM / Observability',
+            description:
+              'Connected classification, similar-case retrieval, missing-information prompts, and recommended actions into a traceable workflow with human handoff.',
+          },
+          {
+            title: 'Multimodal resume parser',
+            meta: '2024 · OCR / Embedding / Structured output',
+            description:
+              'Parsed PDF and image resumes into structured candidate profiles with confidence checks and explainable job-match scoring.',
+          },
+        ],
+        skillsTitle: 'Core capabilities',
+        skills: [
+          {
+            title: 'Large-model application design',
+            description:
+              'Shape business problems into model workflows with clear inputs, tools, fallbacks, evaluation criteria, and user-facing boundaries.',
+            tags: ['Prompt Engineering', 'Function Calling', 'Structured Output'],
+          },
+          {
+            title: 'Retrieval and knowledge systems',
+            description:
+              'Build production RAG pipelines covering ingestion, splitting, embeddings, query rewrite, hybrid search, reranking, and feedback loops.',
+            tags: ['Embedding', 'Query Rewrite', 'Milvus', 'Qdrant'],
+          },
+          {
+            title: 'Backend engineering',
+            description:
+              'Implement stable service APIs and asynchronous workflows with attention to latency, authorization, monitoring, deployment, and costs.',
+            tags: ['Python', 'FastAPI', 'PostgreSQL', 'Redis', 'Docker'],
+          },
+          {
+            title: 'Product delivery',
+            description:
+              'Work with product, design, data, and business teams to ship AI features that remain measurable, maintainable, and explainable.',
+            tags: ['Evaluation', 'LLMOps', 'Cross-team Collaboration'],
+          },
+        ],
+        experienceTitle: 'Experience',
+        experiences: [
+          {
+            company: 'Xinghe Intelligence · AI Application Engineer',
+            period: '2023.06 - Present',
+            summary:
+              'Lead enterprise AI application architecture and core workflow development across prototype validation, backend APIs, evaluation datasets, monitoring, and cost governance.',
+          },
+          {
+            company: 'CloudStack Software · Backend Engineer',
+            period: '2020.07 - 2023.05',
+            summary:
+              'Built SaaS backend modules for task scheduling, message queues, permissions, and data APIs, developing the engineering foundation for later AI product delivery.',
+          },
+        ],
+        contactTitle: 'Contact',
+        contactStatement:
+          'Available for AI prototype validation, RAG system design, Agent workflow development, and production optimization.',
+        contacts: [
+          { label: 'Email', value: 'lin.yichen@example.com', href: 'mailto:lin.yichen@example.com' },
+          { label: 'GitHub', value: 'github.com/lin-ai-dev', href: 'https://github.com/lin-ai-dev' },
+          { label: 'Location', value: 'Shanghai / Remote' },
+        ],
       },
     },
   },
@@ -139,124 +114,99 @@ export const resources = {
           zhCN: '中文',
         },
       },
-      sections: {
-        opening: '职业概述',
-        identity: '个人亮点',
-        capability: '核心能力',
-        experienceTimeline: '工作经历',
-        closing: '联系方式',
-      },
-      resume: {
-        opening: {
-          role: '前端工程师 | AI 应用开发者',
-          headline: '具备企业业务系统与 AI 工作流产品经验的前端工程师。',
+      webResume: {
+        brand: 'LIN YICHEN',
+        menuLabel: '打开导航',
+        closeMenuLabel: '关闭导航',
+        nav: [
+          { id: 'projects', label: '项目' },
+          { id: 'skills', label: '能力' },
+          { id: 'experience', label: '经历' },
+          { id: 'contact', label: '联系' },
+        ],
+        hero: {
+          eyebrow: 'AI Large Model Application Engineer',
+          title: 'AI大模型应用开发工程师',
+          subtitle: '构建可上线、可评估、可维护的\nRAG、Agent 与\nLLMOps 工作流。',
           intro:
-            '长期使用 React、TypeScript 参与保险、运营平台、数据可视化等复杂业务系统开发。\n擅长把流程型需求拆解为稳定界面、可复用模块与可落地的 AI 辅助方案。',
-          hint: '简历概览',
-        },
-        identity: [
-          {
-            title: '覆盖多类企业业务场景的交付经验',
-            description:
-              '参与过保险、车辆运营、政企可视化等项目，关注系统稳定性、代码可维护性与交付质量。',
-          },
-          {
-            title: '擅长处理流程复杂、规则密集的业务系统',
-            description:
-              '熟悉表单校验、流程流转、角色权限、异常场景等高复杂度业务问题的前端实现方式。',
-          },
-          {
-            title: '能够将业务需求转化为可实施方案',
-            description:
-              '能够将需求拆解为组件边界、接口约定、校验规则和可评审的开发任务，便于团队协作落地。',
-          },
-        ],
-        capabilities: [
-          {
-            title: '复杂前端开发',
-            description:
-              '使用 React 与 TypeScript 构建多步骤表单、流程页面和运营后台，关注状态管理清晰度与可维护性。',
-            tags: ['React', 'TypeScript', '前端架构'],
-          },
-          {
-            title: '业务流程分析',
-            description:
-              '能够将业务目标拆解为执行流程、边界条件与开发任务，降低需求落地过程中的偏差和风险。',
-            tags: ['流程设计', '需求分析', 'API 集成'],
-          },
-          {
-            title: 'AI 应用原型设计',
-            description:
-              '基于结构化输出、人工复核与工具集成思路，探索适合真实业务流程的 LLM 应用原型。',
-            tags: ['LLM 应用', '结构化输出', '工具集成'],
-          },
-          {
-            title: '协作与交付',
-            description:
-              '能够与产品、设计、后端协同推进项目，减少返工并保持实现结果与业务目标一致。',
-            tags: ['跨团队协作', '交付质量', '工程实践'],
-          },
-        ],
-        experiences: [
-          {
-            period: '2023.09 - 至今',
-            summary: '前端工程师 | 车辆实时管理平台',
-            tags: ['React', 'TypeScript', 'LLM 应用', 'Agent 工作流'],
-            achievements: [
-              '负责平台核心页面重构，提升代码可维护性、渲染稳定性和后续扩展能力。',
-              '建立可复用组件与前端实现规范，缩短新需求的交付周期。',
-              '围绕业务流程探索 AI 辅助方案，将流程拆解为结构化数据与工具执行步骤。',
-            ],
-          },
-          {
-            period: '2022.08 - 2023.05',
-            summary: '前端工程师 | 保险培训学习平台',
-            tags: ['React', 'API 集成', '人工复核'],
-            achievements: [
-              '设计并实现覆盖多角色业务路径的流程型培训界面。',
-              '优化大文件上传与断点续传交互，降低用户操作阻力。',
-              '与后端协同完善流程状态管理，减少流程异常与支持问题。',
-            ],
-          },
-          {
-            period: '2022.01 - 2022.08',
-            summary: '前端工程师 | 政企数据可视化项目',
-            tags: ['React', 'TypeScript', '结构化输出'],
-            achievements: [
-              '交付多套政企看板项目，提升数据浏览与信息检索效率。',
-              '实现 AI 识别结果展示模块，支持结构化、可追溯的信息呈现。',
-              '基于 Canvas 构建高密度可视化组件，并持续优化渲染性能。',
-            ],
-          },
-          {
-            period: '2021.01 - 2021.12',
-            summary: '开发工程师 | 浏览器自动化与内部工具',
-            tags: ['GoLang', '自动化工具', '工具调用'],
-            achievements: [
-              '开发浏览器自动化工具，支持批量任务执行并减少重复人工操作。',
-              '使用 Go 构建轻量内部工具，提升日常研发效率。',
-              '实践 RPA 流程设计，积累自动化治理与流程编排经验。',
-            ],
-          },
-          {
-            period: '2018.07 - 2020.12',
-            summary: '前端工程师 | 保险销售顾问系统',
-            tags: ['React', 'TypeScript', 'API 集成'],
-            achievements: [
-              '参与系统核心模块开发，覆盖复杂数据录入与业务流程场景。',
-              '构建动态校验表单，提升录入准确性与交互一致性。',
-              '与 Node.js 和 MongoDB 服务联调，保障关键业务数据处理的稳定性。',
-            ],
-          },
-        ],
-        closing: {
-          statement: '期望继续从事前端工程或 AI 应用开发相关工作，参与复杂业务系统、流程产品或实用型自动化方向的项目。',
-          contacts: [
-            { label: '邮箱', value: 'your.email@example.com' },
-            { label: 'GitHub', value: 'github.com/your-handle' },
-            { label: '所在地', value: '日本东京' },
+            '专注于大模型应用从原型到生产的落地：检索方案、工具调用、评测闭环、后端服务、可观测性与成本控制。',
+          tags: ['RAG', 'Agent Workflow', 'LLMOps', 'FastAPI', 'Vector DB'],
+          metrics: [
+            { value: '5+', label: '年工程开发经验' },
+            { value: '12+', label: '个 AI 应用上线项目' },
+            { value: '86%', label: '知识问答首答准确率' },
           ],
         },
+        projectsTitle: '项目与影响',
+        projects: [
+          {
+            title: '企业知识库问答平台',
+            meta: '2025 · RAG / 多租户 / 权限过滤',
+            description:
+              '面向售前、客服和研发知识场景，设计文档切分、元数据权限、混合检索、重排与离线评测闭环。',
+          },
+          {
+            title: '智能工单 Agent',
+            meta: '2024 · Tool Calling / CRM / 可观测性',
+            description:
+              '把工单分类、相似案例召回、信息补全与处理建议串成可追踪工作流，并提供人工接管策略。',
+          },
+          {
+            title: '多模态简历解析',
+            meta: '2024 · OCR / Embedding / 结构化输出',
+            description:
+              '支持 PDF 与图片简历解析，输出结构化候选人画像，并提供字段级置信度与岗位匹配解释。',
+          },
+        ],
+        skillsTitle: '核心能力',
+        skills: [
+          {
+            title: '大模型应用设计',
+            description:
+              '把业务问题拆解为可执行的模型工作流，定义输入、工具、兜底策略、评估标准和用户边界。',
+            tags: ['Prompt Engineering', 'Function Calling', '结构化输出'],
+          },
+          {
+            title: '检索与知识系统',
+            description:
+              '搭建覆盖入库、切分、Embedding、Query Rewrite、混合检索、重排和反馈闭环的生产级 RAG 链路。',
+            tags: ['Embedding', 'Query Rewrite', 'Milvus', 'Qdrant'],
+          },
+          {
+            title: '后端工程化',
+            description:
+              '实现稳定的服务 API 与异步流程，关注延迟、权限、监控、部署和成本治理。',
+            tags: ['Python', 'FastAPI', 'PostgreSQL', 'Redis', 'Docker'],
+          },
+          {
+            title: '产品落地',
+            description:
+              '与产品、设计、数据和业务团队协作，交付可衡量、可维护、可解释的 AI 功能。',
+            tags: ['模型评测', 'LLMOps', '跨团队协作'],
+          },
+        ],
+        experienceTitle: '工作经历',
+        experiences: [
+          {
+            company: '星河智能科技 · AI 应用开发工程师',
+            period: '2023.06 - 至今',
+            summary:
+              '负责企业级大模型应用架构与核心链路开发，覆盖原型验证、后端 API、评测集建设、上线监控与成本治理。',
+          },
+          {
+            company: '云栈软件 · 后端开发工程师',
+            period: '2020.07 - 2023.05',
+            summary:
+              '参与 SaaS 平台后端模块建设，负责任务调度、消息队列、权限体系与数据接口，为 AI 应用工程化打下基础。',
+          },
+        ],
+        contactTitle: '联系',
+        contactStatement: '可提供 AI 原型验证、RAG 系统设计、Agent 工作流开发与上线优化。',
+        contacts: [
+          { label: '邮箱', value: 'lin.yichen@example.com', href: 'mailto:lin.yichen@example.com' },
+          { label: 'GitHub', value: 'github.com/lin-ai-dev', href: 'https://github.com/lin-ai-dev' },
+          { label: '地点', value: '上海 / 可远程协作' },
+        ],
       },
     },
   },

@@ -1,37 +1,70 @@
 .appShell {
+  min-height: 100vh;
   background: #fff;
   color: #111;
 }
 
-.resumePage {
-  width: min(1100px, calc(100% - 3rem));
-  margin: 0 auto;
+.siteHeader {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  min-height: 72px;
+  padding: 0 clamp(1.5rem, 6vw, 6rem);
+  border-bottom: 1px solid #d8d8d8;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(14px);
+}
+
+.brand,
+.siteNav a {
+  color: #111;
+  text-decoration: none;
+}
+
+.brand {
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.siteNav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.45rem;
+}
+
+.siteNav a {
+  font-size: 0.88rem;
+  color: #555;
+}
+
+.siteNav a:hover {
+  color: #111;
 }
 
 .languageSwitcher {
-  position: sticky;
-  top: 0.75rem;
-  z-index: 20;
   display: flex;
-  justify-content: flex-end;
-  gap: 0.5rem;
-  padding: 0.75rem 0 0;
+  align-items: center;
+  gap: 0.45rem;
 }
 
-.languageButton {
-  border: 1px solid #d7d7d7;
-  background: #fff;
-  color: #111;
-  border-radius: 999px;
-  padding: 0.35rem 0.8rem;
+.languageButton,
+.menuButton {
   font: inherit;
-  font-size: 0.8rem;
-  letter-spacing: 0.03em;
   cursor: pointer;
 }
 
-.languageButton:hover {
-  border-color: #111;
+.languageButton {
+  min-height: 2rem;
+  border: 1px solid #cfcfcf;
+  border-radius: 999px;
+  padding: 0.3rem 0.72rem;
+  background: #fff;
+  color: #111;
+  font-size: 0.78rem;
 }
 
 .languageButtonActive {
@@ -40,40 +73,430 @@
   color: #fff;
 }
 
-@media (max-width: 920px) {
-  .resumePage {
-    width: min(1100px, calc(100% - 2rem));
+.menuButton {
+  display: none;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-left: auto;
+  border: 1px solid #111;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.menuButton span {
+  display: block;
+  width: 1.1rem;
+  height: 2px;
+  margin: 0.26rem auto;
+  background: #111;
+}
+
+.scrollProgress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  overflow: hidden;
+}
+
+.scrollProgress span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-origin: left center;
+  background: #111;
+}
+
+main {
+  width: 100%;
+}
+
+.heroSection {
+  min-height: calc(100svh - 72px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 24rem);
+  gap: clamp(3rem, 7vw, 7rem);
+  align-items: center;
+  padding: clamp(4.5rem, 8vw, 7rem) clamp(1.5rem, 6vw, 6rem);
+  background: #f6f6f6;
+}
+
+.heroContent {
+  max-width: 48rem;
+  min-width: 0;
+}
+
+.eyebrow {
+  margin: 0 0 1.35rem;
+  color: #666;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 1.1rem;
+  max-width: 12ch;
+  font-size: clamp(3.1rem, 8vw, 6.6rem);
+  line-height: 0.98;
+  overflow-wrap: anywhere;
+}
+
+.subtitle {
+  margin-bottom: 1.1rem;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  font-weight: 700;
+  white-space: pre-line;
+}
+
+.intro {
+  max-width: 43rem;
+  color: #252525;
+  font-size: clamp(1rem, 1.7vw, 1.15rem);
+  line-height: 1.76;
+}
+
+.tagRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.7rem;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.85rem;
+  border: 1px solid #111;
+  border-radius: 4px;
+  padding: 0.28rem 0.65rem;
+  background: #fff;
+  color: #111;
+  font-size: 0.78rem;
+  font-weight: 650;
+}
+
+.tagInverted {
+  background: #111;
+  color: #fff;
+}
+
+.metricPanel {
+  display: grid;
+  border: 1px solid #111;
+  background: #fff;
+}
+
+.metric {
+  padding: 1.55rem 1.75rem;
+}
+
+.metric + .metric {
+  border-top: 1px solid #d8d8d8;
+}
+
+.metric strong {
+  display: block;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1;
+}
+
+.metric span {
+  display: block;
+  margin-top: 0.45rem;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.contentSection,
+.contactSection {
+  padding: clamp(4.5rem, 8vw, 7rem) clamp(1.5rem, 6vw, 6rem);
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: clamp(2rem, 4vw, 3.3rem);
+  border-bottom: 1px solid #d8d8d8;
+  padding-bottom: 1.1rem;
+}
+
+.sectionHeader span {
+  color: #6c6c6c;
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.sectionHeader h2,
+.contactSection h2 {
+  margin-bottom: 0;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.08;
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.projectCard,
+.skillBlock {
+  border: 1px solid #d8d8d8;
+  background: #fff;
+}
+
+.projectCard {
+  min-height: 16rem;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1.25rem, 2vw, 1.7rem);
+}
+
+.projectCard p {
+  color: #606060;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.projectCard h3,
+.skillBlock h3,
+.experienceItem h3 {
+  margin-bottom: 0.8rem;
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  line-height: 1.22;
+}
+
+.projectCard span,
+.skillBlock p,
+.experienceItem p {
+  color: #303030;
+  line-height: 1.68;
+}
+
+.skillGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.skillBlock {
+  padding: clamp(1.25rem, 2vw, 1.8rem);
+}
+
+.compact {
+  margin-top: 1.25rem;
+}
+
+.experienceList {
+  border-top: 1px solid #d8d8d8;
+}
+
+.experienceItem {
+  display: grid;
+  grid-template-columns: 12rem minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  border-bottom: 1px solid #d8d8d8;
+  padding: 1.8rem 0;
+}
+
+.experienceItem time {
+  color: #606060;
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.experienceItem p {
+  max-width: 56rem;
+}
+
+.contactSection {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 28rem);
+  gap: clamp(2rem, 6vw, 6rem);
+  background: #111;
+  color: #fff;
+}
+
+.contactSection .eyebrow {
+  color: #cfcfcf;
+}
+
+.contactList {
+  align-self: end;
+  display: grid;
+  gap: 1rem;
+}
+
+.contactList p {
+  display: grid;
+  grid-template-columns: 6rem minmax(0, 1fr);
+  gap: 1rem;
+  margin-bottom: 0;
+}
+
+.contactList span {
+  color: #bdbdbd;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.contactList strong,
+.contactList a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 1024px) {
+  .heroSection {
+    grid-template-columns: 1fr;
+    align-items: end;
+  }
+
+  h1 {
+    max-width: 13ch;
+  }
+
+  .metricPanel {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .metric + .metric {
+    border-top: 0;
+    border-left: 1px solid #d8d8d8;
+  }
+
+  .projectGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (max-width: 700px) {
-  .resumePage {
-    width: min(1100px, calc(100% - 1.5rem));
+@media (max-width: 760px) {
+  .siteHeader {
+    grid-template-columns: auto auto;
+    min-height: 64px;
+    padding: 0 1.25rem;
   }
 
+  .menuButton {
+    display: block;
+  }
+
+  .siteNav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 64px;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    border-bottom: 1px solid #d8d8d8;
+    background: #fff;
+  }
+
+  .siteNavOpen {
+    display: flex;
+  }
+
+  .siteNav a,
   .languageSwitcher {
-    justify-content: center;
-    flex-wrap: wrap;
-    padding-top: 0.5rem;
+    border-top: 1px solid #e4e4e4;
+    padding: 1rem 1.25rem;
   }
 
-  .languageButton {
-    min-height: 2rem;
-    padding: 0.4rem 0.85rem;
+  .heroSection {
+    min-height: calc(100svh - 64px);
+    padding: 4rem 1.5rem 2rem;
+  }
+
+  h1 {
+    max-width: 8.5ch;
+    font-size: clamp(2.1rem, 8.6vw, 2.95rem);
+    line-height: 1.05;
+    word-break: break-all;
+  }
+
+  .subtitle {
+    max-width: 15ch;
+    font-size: clamp(1.25rem, 6vw, 1.55rem);
+    overflow-wrap: anywhere;
+    word-break: break-all;
+  }
+
+  .intro {
+    font-size: 1rem;
+  }
+
+  .metricPanel,
+  .projectGrid,
+  .skillGrid,
+  .contactSection {
+    grid-template-columns: 1fr;
+  }
+
+  .metric + .metric {
+    border-top: 1px solid #d8d8d8;
+    border-left: 0;
+  }
+
+  .contentSection,
+  .contactSection {
+    padding: 4rem 1.5rem;
+  }
+
+  .sectionHeader {
+    align-items: start;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .projectCard {
+    min-height: auto;
+  }
+
+  .experienceItem {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+    padding: 1.45rem 0;
+  }
+
+  .contactList {
+    align-self: start;
   }
 }
 
-@media (max-width: 560px) {
-  .resumePage {
-    width: min(1100px, calc(100% - 1rem));
+@media (max-width: 430px) {
+  .heroSection,
+  .contentSection,
+  .contactSection {
+    padding-left: 1.15rem;
+    padding-right: 1.15rem;
   }
 
-  .languageSwitcher {
-    top: 0.5rem;
-    gap: 0.4rem;
+  .tagRow {
+    gap: 0.5rem;
   }
 
-  .languageButton {
-    font-size: 0.75rem;
+  .tag {
+    font-size: 0.72rem;
+  }
+
+  .contactList p {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
   }
 }
