@@ -1,0 +1,77 @@
+.section {
+  padding: clamp(4rem, 8vw, 7rem) 0;
+}
+
+.sectionTitle {
+  margin: 0;
+  font-size: clamp(2rem, 4.8vw, 3.2rem);
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+.list {
+  margin-top: 2.4rem;
+  border-top: 1px solid #e8e8e8;
+}
+
+.item {
+  padding: 2.2rem 0;
+  border-bottom: 1px solid #efefef;
+}
+
+.title {
+  margin: 0;
+  max-width: 28ch;
+  font-size: clamp(1.38rem, 3.2vw, 2.2rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.description {
+  margin: 0.9rem 0 0;
+  max-width: 65ch;
+  color: #3a3a3a;
+  line-height: 1.75;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .list {
+    margin-top: 1.7rem;
+  }
+
+  .item {
+    padding: 1.6rem 0;
+  }
+
+  .title {
+    max-width: 100%;
+    font-size: clamp(1.2rem, 5.2vw, 1.7rem);
+  }
+
+  .description {
+    margin-top: 0.75rem;
+    line-height: 1.68;
+  }
+}
+
+@media (max-width: 560px) {
+  .section {
+    padding: 3rem 0;
+  }
+
+  .sectionTitle {
+    font-size: clamp(1.6rem, 9vw, 2.1rem);
+  }
+
+  .item {
+    padding: 1.3rem 0;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+}

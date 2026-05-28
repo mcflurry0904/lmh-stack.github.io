@@ -1,0 +1,193 @@
+.section {
+  padding: clamp(4rem, 8vw, 7rem) 0;
+}
+
+.sectionTitle {
+  margin: 0;
+  font-size: clamp(2rem, 4.8vw, 3.2rem);
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+.list {
+  margin-top: 2.4rem;
+  position: relative;
+  padding-left: 14rem;
+}
+
+.list::before {
+  content: '';
+  position: absolute;
+  left: 5.8rem;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #dddddd;
+}
+
+.entry {
+  position: relative;
+  padding: 0 0 3.4rem;
+}
+
+.meta {
+  position: absolute;
+  left: -14rem;
+  width: 7rem;
+  top: 0.1rem;
+  text-align: right;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6b6b6b;
+}
+
+.node {
+  position: absolute;
+  left: calc(5.8rem - 7px);
+  top: 0.2rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #bdbdbd;
+  background: #fff;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.nodeActive {
+  background: #111;
+  border-color: #111;
+  transform: scale(1.08);
+}
+
+.content {
+  border-top: 1px solid #efefef;
+  padding-top: 1rem;
+}
+
+.company {
+  margin: 0;
+  font-size: clamp(1.25rem, 2.8vw, 1.85rem);
+  letter-spacing: -0.015em;
+}
+
+.summary {
+  margin: 0.65rem 0 0;
+  color: #323232;
+}
+
+.tags {
+  margin-top: 0.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.achievements {
+  margin: 1rem 0 0;
+  padding-left: 1.2rem;
+  color: #2a2a2a;
+  line-height: 1.7;
+}
+
+.achievements li + li {
+  margin-top: 0.45rem;
+}
+
+@media (max-width: 980px) {
+  .list {
+    padding-left: 0;
+  }
+
+  .list::before {
+    left: 0.4rem;
+  }
+
+  .entry {
+    padding-left: 1.5rem;
+    padding-bottom: 2.6rem;
+  }
+
+  .meta {
+    position: static;
+    width: auto;
+    text-align: left;
+    margin: 0 0 0.55rem;
+    font-size: 0.78rem;
+  }
+
+  .node {
+    left: calc(0.4rem - 7px);
+    top: 0.08rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .list {
+    margin-top: 1.8rem;
+  }
+
+  .entry {
+    padding-bottom: 2rem;
+  }
+
+  .content {
+    padding-top: 0.85rem;
+  }
+
+  .company {
+    font-size: clamp(1.15rem, 5.2vw, 1.5rem);
+  }
+
+  .summary {
+    margin-top: 0.55rem;
+    line-height: 1.62;
+  }
+
+  .achievements {
+    margin-top: 0.85rem;
+    line-height: 1.62;
+  }
+}
+
+@media (max-width: 560px) {
+  .section {
+    padding: 3rem 0;
+  }
+
+  .sectionTitle {
+    font-size: clamp(1.6rem, 9vw, 2.1rem);
+  }
+
+  .list::before,
+  .node {
+    display: none;
+  }
+
+  .entry {
+    padding: 0 0 1.2rem;
+  }
+
+  .meta {
+    margin-bottom: 0.4rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.07em;
+  }
+
+  .content {
+    border: 1px solid #ececec;
+    border-radius: 0.6rem;
+    padding: 0.9rem;
+    background: #fcfcfc;
+  }
+
+  .achievements {
+    margin-top: 0.75rem;
+    padding-left: 1rem;
+    font-size: 0.95rem;
+  }
+}
