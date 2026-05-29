@@ -7,20 +7,20 @@ export const supportedLanguages = ['en', 'zh-CN'] as const
 
 function normalizeLanguage(language: string | null | undefined): (typeof supportedLanguages)[number] {
   if (!language) {
-    return 'en'
+    return 'zh-CN'
   }
 
   return language.toLowerCase().startsWith('zh') ? 'zh-CN' : 'en'
 }
 
 const initialLanguage = normalizeLanguage(
-  typeof window === 'undefined' ? 'en' : localStorage.getItem(LANGUAGE_STORAGE_KEY) ?? navigator.language,
+  typeof window === 'undefined' ? 'zh-CN' : localStorage.getItem(LANGUAGE_STORAGE_KEY) ?? navigator.language,
 )
 
 void i18n.use(initReactI18next).init({
   resources,
   lng: initialLanguage,
-  fallbackLng: 'en',
+  fallbackLng: 'zh-CN',
   supportedLngs: supportedLanguages,
   interpolation: {
     escapeValue: false,
